@@ -1,0 +1,130 @@
+body {
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0 auto;
+    background-image: linear-gradient(to top right, rgba(58,18,18,0.2), rgba(152,76,76,1));
+}
+
+@font-face {
+    font-family:Alegreya;
+    src: url("alegreya-sans.regular.ttf");
+}
+
+.container {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height:10vh;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: #7D3A1E;
+    font-size: 45px;
+    margin: 0.2em 1em;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.content {
+    width: 100%;
+    height: 90vh;
+    display:flex;
+    flex-direction: row;
+}
+
+.textSide {
+    height:90vh;
+    width:50%;
+}
+
+.text {
+    width:70%;
+}
+
+.textArea {
+    display: flex;
+    justify-content: center;
+    font-family: Alegreya, sans;
+    margin-top: 10em;
+    text-align: center;
+    font-size: 22px;
+}
+
+
+
+.loginSide {
+    height: 90vh;
+    width: 50%;
+}
+
+.formDiv {
+    width:80%;
+}
+
+
+.form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10em;
+    text-align: center;
+    font-size: 22px;
+}
+
+.buttonDiv {
+    width: 400px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: flex-end;
+}
+
+.loginInp {
+    margin: 0 auto;
+    font-family: Alegreya, sans;
+    font-size:20px;
+    height:50px;
+    width:400px;
+    text-align: center;
+    border: 0;
+    border-radius: 50px;
+}
+
+.passwInp {
+    margin: 0 auto;
+    font-family: Alegreya, sans;
+    font-size:20px;
+    margin-top:20px;
+    height:50px;
+    width:400px;
+    text-align: center;
+    border: 0;
+    border-radius: 50px;
+}
+
+.buttonLogin {
+    font-family: Alegreya, sans;
+    margin-top: 20px;
+    font-size: 18px;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    border: 0;
+    border-radius: 50px;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+}
