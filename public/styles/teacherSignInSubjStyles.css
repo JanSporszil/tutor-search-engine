@@ -74,10 +74,10 @@ body {
     border-radius: 50px;
     background-color: rgba(255,15,0,0.4);
     color: white;
-
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-.regInput {
+.cityInput {
     font-family: Alegreya, sans;
     font-size:20px;
     height:50px;
@@ -88,6 +88,8 @@ body {
     margin-bottom: 20px;
     margin-left:auto;
     margin-right:auto;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    background-color: #E9E3E3;
 }
 
 .selectSubj {
@@ -101,6 +103,8 @@ body {
     margin-bottom: 20px;
     margin-left:auto;
     margin-right:auto;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    background-color: #E9E3E3;
 }
 
 
@@ -115,6 +119,8 @@ body {
     margin-bottom: 20px;
     margin-left:auto;
     margin-right:auto;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    background-color: #E9E3E3;
 }
 
 .registerButt {
@@ -130,13 +136,7 @@ body {
     border-radius: 50px;
     background-color: rgba(0,0,0,0.4);
     color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-optionRol {
-    font-family: Alegreya, sans;
-    font-size: 16px;
-    width: 250px;
-    border: 0;
-    border-radius: 50px;
-}
 

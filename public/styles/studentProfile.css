@@ -47,88 +47,78 @@ body {
     flex-direction: row;
 }
 
-.textSide {
+.leftSide {
     height:90vh;
-    width:50%;
+    width:30%;
 }
 
-.text {
-    width:70%;
+.profilePic {
+    height: 300px;
+    width: 300px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: red;
+    margin: 50px auto 0;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.name\&Surname {
+    font-family: Alegreya, sans;
+    margin: 100px auto 0;
+    height: 50px;
+    width: 350px;
+    background-color: #E9E3E3;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+}
+
+.city {
+    font-family: Alegreya, sans;
+    margin: 30px auto 0;
+    height: 50px;
+    width: 350px;
+    background-color: #E9E3E3;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+}
+.acceptDiv {
+    margin: 50px auto 0;
+    width: 350px;
+    display: flex;
+}
+
+.acceptButton {
+    font-family: Alegreya, sans;
+    height: 50px;
+    width: 350px;
+    background-color: rgba(0,0,0,0.30);
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+}
+
+.rightSide {
+    height: 90vh;
+    width: 70%;
+
 }
 
 .textArea {
-    display: flex;
-    justify-content: center;
     font-family: Alegreya, sans;
-    margin-top: 10em;
-    text-align: center;
-    font-size: 22px;
-}
-
-
-
-.loginSide {
-    height: 90vh;
-    width: 50%;
-}
-
-.formDiv {
-    width:80%;
-}
-
-
-.form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 10em;
-    text-align: center;
-    font-size: 22px;
-}
-
-.buttonDiv {
-    width: 400px;
-    display: flex;
-    margin: 0 auto;
-    justify-content: flex-end;
-}
-
-.loginInp {
-    margin: 0 auto;
-    font-family: Alegreya, sans;
-    font-size:20px;
-    height:50px;
-    width:400px;
-    text-align: center;
-    border: 0;
-    border-radius: 50px;
-    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+    margin: 50px auto 0 100px;
+    width: 700px;
+    height: 530px;
+    box-sizing: border-box;
+    resize: none;
     background-color: #E9E3E3;
-}
-
-.passwInp {
-    font-family: Alegreya, sans;
-    font-size:20px;
-    margin: 20px auto 0;
-    height:50px;
-    width:400px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    padding: 100px 80px 100px 80px;
+    font-size: 22px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
     text-align: center;
-    border: 0;
-    border-radius: 50px;
-    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
-    background-color: #E9E3E3;
-}
-
-.buttonLogin {
-    font-family: Alegreya, sans;
-    margin-top: 20px;
-    font-size: 18px;
-    height: 50px;
-    width: 200px;
-    text-align: center;
-    border: 0;
-    border-radius: 50px;
-    background-color: rgba(0,0,0,0.4);
-    color: white;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }

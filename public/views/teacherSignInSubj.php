@@ -18,7 +18,7 @@
 
         <p class="text">Pracuj z nami</p>
 
-        <input type="text" class="regInput" placeholder="Miasto">
+        <input type="text" class="cityInput" placeholder="Miasto">
 
         <select class="selectSubj">
             <option value="" selected disabled hidden>Wybór przedmiotu</option>

@@ -24,5 +24,24 @@ class DefaultController extends AppController {
         $this->render('teacherSignInSubj');
     }
 
+    public function studentProfile() {
+        $this->render('studentProfile');
+    }
+
+    public function teacherProfile() {
+        $this->render('teacherProfile');
+    }
+
+    public function classesAvailability() {
+        $this->render('classesAvailability');
+    }
+
+    public function searchClasses() {
+        $this->render('searchClasses');
+    }
+
+    public function bookClasses() {
+        $this->render('bookClasses');
+    }
 
 }
