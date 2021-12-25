@@ -16,16 +16,25 @@
 
     <div class="form">
         <p class="text">Pracuj z nami</p>
-        <input type="text" class="regInput" placeholder="Imię">
-        <input type="text" class="regInput" placeholder="Nazwisko">
-        <input type="text" class="regInput" placeholder="Adres email">
-        <input type="text" class="regInput" placeholder="Nazwa Użytkownika">
-        <input type="text" class="regInput" placeholder="Hasło">
-        <div class="buttons">
-        <button class="buttNext">
-           Dalej
-        </button>
-        </div>
+        <form class="adding" action="registerTeacher" method="post">
+                <?php
+                if(isset($messages))
+                    foreach ($messages as $message)
+                        echo $message;
+                ?>
+            <input name="Name" type="text" class="regInput" placeholder="Imię">
+            <input name="Surname" type="text" class="regInput" placeholder="Nazwisko">
+            <input name="Email" type="text" class="regInput" placeholder="Adres email">
+            <input name="Username" type="text" class="regInput" placeholder="Nazwa Użytkownika">
+            <input name="Password" type="text" class="regInput" placeholder="Hasło">
+
+                <div class="buttons">
+                    <button class="buttNext">
+                       Zarejestruj
+                    </button>
+                </div>
+        </form>
+    </div>
     </div>
 
 </div>

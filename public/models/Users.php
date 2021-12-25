@@ -3,7 +3,6 @@
     include __DIR__.'/UserGroups.php';
 
     class Users {
-        private int $id;
         private int $GroupID;
         private string $Name;
         private string $Surname;
@@ -12,31 +11,14 @@
         private string $Password;
 
 
-        public function __construct(int $id, int $GroupID, string $Name, string $Surname, string $email, string $Username, string $Password)
+        public function __construct(int $GroupID, string $Name, string $Surname, string $email, string $Username, string $Password)
         {
-            $this->id = $id;
             $this->GroupID = $GroupID;
             $this->Name = $Name;
             $this->Surname = $Surname;
             $this->email = $email;
             $this->Username = $Username;
             $this->Password = $Password;
-        }
-
-        /**
-         * @return int
-         */
-        public function getid(): int
-        {
-            return $this->id;
-        }
-
-        /**
-         * @param int $id
-         */
-        public function setid(int $id): void
-        {
-            $this->id = $id;
         }
 
         /**

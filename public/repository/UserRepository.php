@@ -17,6 +17,14 @@ class UserRepository extends Repository
         }
 
 
-        return new Users($user['id'], $user['GroupID'], $user['Name'], $user['Surname'], $user['Email'], $user['Username'], $user['Password']);
+        return new Users($user['GroupID'], $user['Name'], $user['Surname'], $user['Email'], $user['Username'], $user['Password']);
     }
+
+    public function register(Users $user) {
+        $stmt = $this->database->connect()->prepare(
+            'INSERT INTO "Users" ("GroupID", "Name", "Surname", "Email", "Username", "Password") VALUES (?, ?, ?, ?, ?, ?)');
+
+        $stmt->execute([$user->getGroupID(), $user->getName(), $user->getSurname(), $user->getEmail(), $user->getUsername(), $user->getUsername()]);
+    }
+
 }

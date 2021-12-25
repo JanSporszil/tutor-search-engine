@@ -30,8 +30,8 @@
                         foreach ($messages as $message)
                             echo $message;
                     ?>
-                    <input name ="username" type="text" class="loginInp" placeholder="Login">
-                    <input name="password" type="text" class="passwInp" placeholder="Haslo">
+                    <input name ="Username" type="text" class="loginInp" placeholder="Login">
+                    <input name="Password" type="text" class="passwInp" placeholder="Haslo">
                     <div class="buttonDiv">
                     <button class="buttonLogin" type="submit">
                         Zaloguj
