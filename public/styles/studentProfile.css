@@ -99,6 +99,7 @@ body {
     color: white;
     font-size: 16px;
     box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+    margin: auto 0;
 }
 
 .rightSide {
@@ -106,10 +107,20 @@ body {
     width: 70%;
 
 }
+.description{
+    vertical-align: middle;
+    display: table-row;
+}
 
+.description textarea {
+    display: table-cell;
+}
 .textArea {
+    display: table-cell;
+    vertical-align: middle;
     font-family: Alegreya, sans;
     margin: 50px auto 0 100px;
+    white-space: pre-wrap;
     width: 700px;
     height: 530px;
     box-sizing: border-box;
@@ -121,4 +132,22 @@ body {
     border: 2px solid #ccc;
     border-radius: 4px;
     text-align: center;
+}
+
+.logout {
+    margin: 20px auto 0;
+    width: 350px;
+    display: flex;
+}
+
+.logoutButton {
+    font-family: Alegreya, sans;
+    height: 50px;
+    width: 350px;
+    background-color: rgba(255,15,0,0.4);
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }

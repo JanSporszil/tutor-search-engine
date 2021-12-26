@@ -107,7 +107,18 @@ body {
 
 }
 
+.description{
+    vertical-align: middle;
+    display: table-row;
+}
+
+.description textarea {
+    display: table-cell;
+}
+
 .textArea {
+    display: table-cell;
+    vertical-align: middle;
     font-family: Alegreya, sans;
     margin: 50px auto 0 100px;
     width: 700px;

@@ -36,9 +36,8 @@
 
         <div class="rightSide">
             <div class="description">
-                <textarea class="textArea">
-
-                </textarea>
+                <textarea class="textArea" disabled>Twój opis.
+Możesz go edytować</textarea>
             </div>
 
             <div class="subjects">

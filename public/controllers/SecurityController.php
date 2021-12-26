@@ -46,6 +46,8 @@ class SecurityController extends AppController
             return $this->render('login', ['messages' => ['Incorrect password']]);
         }
 
+        $_SESSION['user'] = $user;
+
         if($user->getGroupID() === 2) {
             header("Location: {$url}/studentProfile");
             //return $this->render('studentProfile');
@@ -55,6 +57,7 @@ class SecurityController extends AppController
             header("Location: {$url}/teacherProfile");
             //return $this->render('teacherProfile');
         }
+
     }
 
     public function registerStudent() {
@@ -95,6 +98,12 @@ class SecurityController extends AppController
 
     }
 
+    public function logout(){
+        session_destroy();
+
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/");
+    }
 
 
 }

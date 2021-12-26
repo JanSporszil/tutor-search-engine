@@ -29,16 +29,19 @@
             </div>
 
             <div class="acceptDiv">
-                <button class="acceptButton">Zatwierdź zmiany</button>
+                <button class="acceptButton">Edytuj profil</button>
             </div>
+
+            <form class="logout" action="logout" method="post">
+                <button class="logoutButton" type="submit">Wyloguj</button>
+            </form>
 
         </div>
 
         <div class="rightSide">
             <div class="description">
-                <textarea class="textArea">
-
-                </textarea>
+                <textarea class="textArea" disabled>Twój opis.
+Możesz go edytować</textarea>
             </div>
         </div>
 

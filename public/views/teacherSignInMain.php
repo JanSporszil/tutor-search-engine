@@ -26,7 +26,7 @@
             <input name="Surname" type="text" class="regInput" placeholder="Nazwisko">
             <input name="Email" type="text" class="regInput" placeholder="Adres email">
             <input name="Username" type="text" class="regInput" placeholder="Nazwa Użytkownika">
-            <input name="Password" type="text" class="regInput" placeholder="Hasło">
+            <input name="Password" type="password" class="regInput" placeholder="Hasło">
 
                 <div class="buttons">
                     <button class="buttNext">
