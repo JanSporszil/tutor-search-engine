@@ -8,7 +8,7 @@ $path = parse_url($path, PHP_URL_PATH);
 
 Routing::get('', 'DefaultController');
 Routing::get('home', 'DefaultController');
-Routing::get('login', 'DefaultController');
+
 Routing::get('studentSignIn', 'DefaultController');
 Routing::get('teacherSignInMain', 'DefaultController');
 Routing::get('teacherSignInSubj', 'DefaultController');
@@ -18,10 +18,13 @@ Routing::get('classesAvailability', 'DefaultController');
 Routing::get('searchClasses', 'DefaultController');
 Routing::get('bookClasses', 'DefaultController');
 
-Routing::post('loginIn', 'SecurityController');
+Routing::get('login', 'SecurityController');
 Routing::post('registerStudent', 'SecurityController');
 Routing::post('registerTeacher', 'SecurityController');
 Routing::post('logout', 'SecurityController');
+Routing::post('addInfoCont', 'UserController');
+
+
 
 
 

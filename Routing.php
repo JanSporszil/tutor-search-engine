@@ -2,6 +2,7 @@
 
 require_once 'public/controllers/DefaultController.php';
 require_once 'public/controllers/SecurityController.php';
+require_once 'public/controllers/UserController.php';
 
 class Routing {
     public static $routes;

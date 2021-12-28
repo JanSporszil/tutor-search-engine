@@ -7,7 +7,7 @@ require_once __DIR__.'/../repository/UserRepository.php';
 class SecurityController extends AppController
 {
 
-    private $userRepository;
+    private UserRepository $userRepository;
 
     public function __construct()
     {
@@ -22,7 +22,7 @@ class SecurityController extends AppController
     }
 
 
-    public function loginIn() {
+    public function login() {
 
         $url = "http://$_SERVER[HTTP_HOST]";
 
@@ -34,18 +34,16 @@ class SecurityController extends AppController
 
         $user = $this->userRepository->getUser($username);
 
+
         if(!$user) {
             return $this->render('login', ['messages' => ['User doesnt exist']]);
-        }
-
-        if($user->getUsername() !== $username) {
-            return $this->render('login', ['messages' => ['User with this username doesnt exist']]);
         }
 
         if($user->getPassword() !== $password) {
             return $this->render('login', ['messages' => ['Incorrect password']]);
         }
 
+        $user->setUserInfo($this->userRepository->getUserInfo($user->getUsername()));
         $_SESSION['user'] = $user;
 
         if($user->getGroupID() === 2) {
@@ -70,8 +68,9 @@ class SecurityController extends AppController
         $Username = $_POST['Username'];
         $Password = $_POST['Password'];
 
+
         //GroupID === 2 -> student, 1 for teachers
-        $user = new Users(2, $Name, md5(md5($Surname)), $Email, $Username, $Password);
+        $user = new Users(0,2, $Name, $Surname, $Email, $Username, md5(md5($Password)));
 
         $this->userRepository->register($user);
 
@@ -90,7 +89,7 @@ class SecurityController extends AppController
         $Password = $_POST['Password'];
 
         //GroupID === 2 -> student, 1 for teachers
-        $user = new Users(1, $Name, md5(md5($Surname)), $Email, $Username, $Password);
+        $user = new Users(0,1, $Name, md5(md5($Surname)), $Email, $Username, $Password);
 
         $this->userRepository->register($user);
 

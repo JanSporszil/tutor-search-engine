@@ -25,7 +25,11 @@
             </div>
 
             <div class="city">
-
+                <p><?php if($userInfo == null || $userInfo->getCity() == "")
+                        echo "Nie wybrano miasta";
+                    else
+                        echo $userInfo->getCity();
+                     ?></p>
             </div>
 
             <div class="acceptDiv">
@@ -40,13 +44,15 @@
 
         <div class="rightSide">
             <div class="description">
-                <textarea class="textArea" disabled>Twój opis.
-Możesz go edytować</textarea>
+                <textarea class="textArea" disabled><?php if($userInfo == null || $userInfo->getDescription() == "")
+                        echo "Twój opis. Możesz go edytować.";
+                    else
+                        echo $userInfo->getDescription();
+                    ?></textarea>
             </div>
         </div>
 
     </div>
-
 </div>
 
 </body>

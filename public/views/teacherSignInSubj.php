@@ -15,34 +15,33 @@
 
 
     <div class="form">
+        <form class="addDescription" action="addInfoCont" method="post">
+            <p class="text">Pracuj z nami</p>
 
-        <p class="text">Pracuj z nami</p>
+            <select name="City" class="selectSubj">
+                <option value="" selected disabled hidden>Wybierz miasto</option>
+                <option value="Krakow">Krakow</option>
+                <option value="Warszawa">Warszawa</option>
+                <option value="Poznan">Poznan</option>
+                <option value="Łódź">Łódź</option>
+                <option value="Białystok">Białystok</option>
+                <option value="Tarnów">Tarnów</option>
+            </select>
 
-        <input type="text" class="cityInput" placeholder="Miasto">
+            <input name="Description" type="text" class="regDescription" placeholder="Twój opis">
 
-        <select class="selectSubj">
-            <option value="" selected disabled hidden>Wybór przedmiotu</option>
-            <option value="Matematyka">Matematyka</option>
-            <option value="Polski">Polski</option>
-            <option value="Angielski">Angielski</option>
-            <option value="Biologia">Biologia</option>
-            <option value="Chemia">Chemia</option>
-            <option value="Niemiecki">Niemiecki</option>
-        </select>
+            <div class="buttons">
 
-        <input type="text" class="regDescription" placeholder="Twój opis">
+                <button class="cancelButt">
+                    Anuluj
+                </button>
 
-        <div class="buttons">
+                <button class="registerButt" type="submit">
+                    Zatwierdź
+                </button>
 
-            <button class="cancelButt">
-                Anuluj
-            </button>
-
-            <button class="registerButt">
-                Zarejestruj
-            </button>
-
-        </div>
+            </div>
+        </form>
     </div>
 
 </div>

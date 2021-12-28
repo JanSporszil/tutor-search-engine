@@ -27,7 +27,12 @@
             <input name="Email" type="text" class="regInput" placeholder="Adres email">
             <input name="Username" type="text" class="regInput" placeholder="Nazwa Użytkownika">
             <input name="Password" type="password" class="regInput" placeholder="Hasło">
+                <!--dodac inputa z wyborem konta -->
+            <div class="choose">
+                <span>Student <input type="radio" value="1" name="accountType"/></span>
+                <span>Nauczyciel <input type="radio" value="2" name="accountType"/></span>
 
+            </div>
                 <div class="buttons">
                     <button class="buttNext">
                        Zarejestruj

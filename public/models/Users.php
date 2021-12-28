@@ -1,24 +1,61 @@
 <?php
 
-    include __DIR__.'/UserGroups.php';
+
 
     class Users {
+        private int $id;
         private int $GroupID;
         private string $Name;
         private string $Surname;
         private string $email;
         private string $Username;
         private string $Password;
+        private ?User_info $user_info;
 
-
-        public function __construct(int $GroupID, string $Name, string $Surname, string $email, string $Username, string $Password)
+        public function __construct(int $id, int $GroupID, string $Name, string $Surname, string $email, string $Username, string $Password)
         {
+            $this->id = $id;
             $this->GroupID = $GroupID;
             $this->Name = $Name;
             $this->Surname = $Surname;
             $this->email = $email;
             $this->Username = $Username;
             $this->Password = $Password;
+        }
+
+        /**
+         * @return User_info
+         */
+        public function getUserInfo(): ?User_info
+        {
+            return $this->user_info;
+        }
+
+
+        /**
+         * @param User_info $user_info
+         */
+        public function setUserInfo(?User_info $user_info): void
+        {
+            $this->user_info = $user_info;
+        }
+
+
+
+        /**
+         * @return int
+         */
+        public function getId(): int
+        {
+            return $this->id;
+        }
+
+        /**
+         * @param int $id
+         */
+        public function setId(int $id): void
+        {
+            $this->id = $id;
         }
 
         /**
