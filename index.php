@@ -30,4 +30,5 @@ Routing::post('addAvailability', 'TeacherController');
 
 
 
+
 Routing::run($path);

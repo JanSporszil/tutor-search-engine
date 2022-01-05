@@ -2,6 +2,7 @@
 
 require_once 'AppController.php';
 require_once __DIR__.'/../repository/UserRepository.php';
+require_once __DIR__.'/../repository/TeacherRepository.php';
 
 class DefaultController extends AppController {
 
@@ -63,7 +64,28 @@ class DefaultController extends AppController {
     }
 
     public function addSubjects() {
-        $this->render('addSubjects');
+
+        if(isset($_POST['subject'])) {
+            $teacherRepository = new TeacherRepository();
+            $subject = $_POST['subject'];
+
+            $user = $_SESSION['user'];
+
+            $subjects = $teacherRepository->readSubjects($user->getId());
+
+            $unserialized = unserialize($subjects);
+            if (!is_array($unserialized))
+                $unserialized = array();
+
+            if (!in_array($subject, $unserialized))
+                $unserialized[] = $subject;
+
+
+            $sendArray = serialize($unserialized);
+
+            $teacherRepository->pushSubjects($user->getId(), $sendArray);
+        }
+        $this->render('addSubjects', ['messages' => ['Wybierz swoje przedmioty']]);
     }
 
 }

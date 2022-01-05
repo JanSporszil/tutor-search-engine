@@ -33,4 +33,13 @@ class TeacherController extends AppController
 
         $this->teacherRepository->addAvail($user->getId(), $sendArray);
     }
+
+    public function getAvailability () {
+        //TODO dodac wyswietlanie informacji na stronie
+    }
+
+    public function getSubjects() {
+        //TODO dodac wyswietlanie w selecie na stronie
+    }
+
 }

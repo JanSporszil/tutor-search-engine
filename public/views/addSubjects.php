@@ -12,29 +12,64 @@
     <div class="header">
         <p class="logo">SQUANCHU</p>
 
+        <div class="buttons">
+            <a href="teacherProfile"><button class="profile" value="teacherProfile">teacherProfile</button></a>
+        </div>
+
     </div>
     <div class="content">
-        <form class="addSubjects" action="addSubject" method="post">
-            <p class="text">Dodaj lub usuń swoje przedmioty</p>
+        <div class="frame">
+            <form class="subjects" action="addSubjects" method="post">
+                <p class="text"><?php
+                    if(isset($messages))
+                        foreach ($messages as $message)
+                            echo $message;
+                    ?></p>
 
-            <select name="subject" class="selectSubj">
-                <option value="" selected disabled hidden>Wybierz przedmiot</option>
-                <option value="Angielski">Angielski</option>
-                <option value="Polski">Polski</option>
-                <option value="Matematyka">Matematyka</option>
-                <option value="Hiszpanski">Hiszpański</option>
-                <option value="Chemia">Chemia</option>
-                <option value="Biologia">Biologia</option>
-            </select>
+                <select name="subject" class="selectSubj">
+                    <option value="" selected disabled hidden>Wybierz przedmiot</option>
+                    <option value="Angielski">Angielski</option>
+                    <option value="Polski">Polski</option>
+                    <option value="Matematyka">Matematyka</option>
+                    <option value="Hiszpanski">Hiszpański</option>
+                    <option value="Chemia">Chemia</option>
+                    <option value="Biologia">Biologia</option>
+                </select>
 
-            <div class="buttons">
+                <div class="buttons">
 
-                <button class="addSubjectButton" type="submit">
-                    Zatwierdź
-                </button>
+                    <button class="addSubjectButton" type="submit">
+                        Dodaj
+                    </button>
 
-            </div>
-        </form>
+                </div>
+            </form>
+        </div>
+
+        <div class="frame">
+            <form class="subjects" action="deleteSubjects" method="post">
+                <p class="text">Usuń przedmioty</p>
+
+                <select name="subject" class="selectSubj">
+                    <option value="" selected disabled hidden>Wybierz przedmiot</option>
+                    <option value="Angielski">Angielski</option>
+                    <option value="Polski">Polski</option>
+                    <option value="Matematyka">Matematyka</option>
+                    <option value="Hiszpanski">Hiszpański</option>
+                    <option value="Chemia">Chemia</option>
+                    <option value="Biologia">Biologia</option>
+                </select>
+
+                <div class="buttons">
+
+                    <button class="deleteSubjectButton" type="submit">
+                        Usuń
+                    </button>
+
+                </div>
+            </form>
+        </div>
+
     </div>
 
 

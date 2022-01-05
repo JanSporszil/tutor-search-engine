@@ -12,7 +12,7 @@
         private string $Password;
         private ?User_info $user_info;
         private ?array $availability;
-
+        private ?array $subjects;
 
         public function __construct(int $id, int $GroupID, string $Name, string $Surname, string $email, string $Username, string $Password)
         {
@@ -24,6 +24,24 @@
             $this->Username = $Username;
             $this->Password = $Password;
         }
+
+        /**
+         * @return array|null
+         */
+        public function getSubjects(): ?array
+        {
+            return $this->subjects;
+        }
+
+        /**
+         * @param array|null $subjects
+         */
+        public function setSubjects(?array $subjects): void
+        {
+            $this->subjects = $subjects;
+        }
+
+
 
         /**
          * @return array|null
