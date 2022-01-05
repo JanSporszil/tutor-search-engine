@@ -48,7 +48,7 @@
 
         <div class="frame">
             <form class="subjects" action="deleteSubjects" method="post">
-                <p class="text">Usuń przedmioty</p>
+                <p class="text">Twoje przedmioty. Możesz je tutaj usunąć</p>
 
                 <select name="subject" class="selectSubj">
                     <option value="" selected disabled hidden>Wybierz przedmiot</option>

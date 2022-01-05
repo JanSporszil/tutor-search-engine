@@ -53,7 +53,18 @@
             </div>
 
             <div class="subjects">
-                <p class="subjectList">TODO DODAC WYPISYWANIE Z BAZY Kliknij, aby dodać przedmioty</p>
+                <p class="subjectList"><?php if($subjects == null || $user->getSubjects() == "")
+                        echo "Tutaj są twoje przedmioty";
+                    else{
+                        $array = $user->getSubjects();
+                        $size = sizeof($array);
+                        for($i = 0; $i < $size-1; $i++) {
+                            echo $array[$i];
+                            echo ", ";
+                        }
+                        echo $array[$size-1];
+                    }
+                    ?></p>
             </div>
 
             <div class="classesAvailable">

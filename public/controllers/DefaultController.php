@@ -42,12 +42,16 @@ class DefaultController extends AppController {
     public function teacherProfile() {
         $user = $_SESSION['user'];
         $repository = new UserRepository();
+        $teacherRepository = new TeacherRepository();
+        $subjects = unserialize($teacherRepository->readSubjects($user->getId()));
+        $user->setSubjects($subjects);
         $userinfo = $repository->getUserInfo($user->getId());
         $user->setUserInfo($userinfo);
         $_SESSION['user'] = $user;
         $this->render('teacherProfile', [
             'user' => $user,
-            'userInfo' => $userinfo
+            'userInfo' => $userinfo,
+            'subjects' => $subjects
         ]);
     }
 
@@ -85,7 +89,8 @@ class DefaultController extends AppController {
 
             $teacherRepository->pushSubjects($user->getId(), $sendArray);
         }
-        $this->render('addSubjects', ['messages' => ['Wybierz swoje przedmioty']]);
+        $subjects = unserialize($teacherRepository->readSubjects($user->getId()));
+        $this->render('addSubjects', ['messages' => ['Wybierz swoje przedmioty'], 'subjects' => $subjects ]);
     }
 
 }
