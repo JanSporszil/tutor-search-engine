@@ -10,20 +10,22 @@ Routing::get('', 'DefaultController');
 Routing::get('home', 'DefaultController');
 
 Routing::get('studentSignIn', 'DefaultController');
-Routing::get('teacherSignInMain', 'DefaultController');
-Routing::get('teacherSignInSubj', 'DefaultController');
+Routing::get('registerAccount', 'DefaultController');
+Routing::get('editProfile', 'DefaultController');
 Routing::get('studentProfile', 'DefaultController');
 Routing::get('teacherProfile', 'DefaultController');
 Routing::get('classesAvailability', 'DefaultController');
 Routing::get('searchClasses', 'DefaultController');
 Routing::get('bookClasses', 'DefaultController');
+Routing::get('addSubjects', 'DefaultController');
+
 
 Routing::get('login', 'SecurityController');
 Routing::post('registerStudent', 'SecurityController');
-Routing::post('registerTeacher', 'SecurityController');
+Routing::post('register', 'SecurityController');
 Routing::post('logout', 'SecurityController');
 Routing::post('addInfoCont', 'UserController');
-
+Routing::post('addAvailability', 'TeacherController');
 
 
 
