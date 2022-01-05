@@ -17,18 +17,19 @@ class DefaultController extends AppController {
         $this->render('studentSignIn');
     }
 
-    public function teacherSignInMain() {
-        $this->render('teacherSignInMain');
+    public function registerAccount() {
+        $this->render('registerAccount');
     }
 
-    public function teacherSignInSubj() {
-        $this->render('teacherSignInSubj');
+    public function editProfile() {
+        $this->render('editProfile');
     }
 
     public function studentProfile() {
         $user = $_SESSION['user'];
+
         $repository = new UserRepository();
-        $userinfo = $repository->getUserInfo($user->getUsername());
+        $userinfo = $repository->getUserInfo($user->getId());
         $user->setUserInfo($userinfo);
         $_SESSION['user'] = $user;
         $this->render('studentProfile', [
@@ -38,7 +39,15 @@ class DefaultController extends AppController {
     }
 
     public function teacherProfile() {
-        $this->render('teacherProfile');
+        $user = $_SESSION['user'];
+        $repository = new UserRepository();
+        $userinfo = $repository->getUserInfo($user->getId());
+        $user->setUserInfo($userinfo);
+        $_SESSION['user'] = $user;
+        $this->render('teacherProfile', [
+            'user' => $user,
+            'userInfo' => $userinfo
+        ]);
     }
 
     public function classesAvailability() {
@@ -51,6 +60,10 @@ class DefaultController extends AppController {
 
     public function bookClasses() {
         $this->render('bookClasses');
+    }
+
+    public function addSubjects() {
+        $this->render('addSubjects');
     }
 
 }

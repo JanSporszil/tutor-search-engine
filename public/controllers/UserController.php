@@ -21,11 +21,8 @@ class UserController extends AppController
             return $this->render('editProfile');
         }
 
-
-
         $user = $_SESSION['user'];
         $userinfo = $user->getUserInfo();
-
         $City = $_POST['City'] ?: "";
         $Description = $_POST['Description'] ?: "";
 

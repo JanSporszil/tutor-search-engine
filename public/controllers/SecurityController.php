@@ -43,7 +43,7 @@ class SecurityController extends AppController
             return $this->render('login', ['messages' => ['Incorrect password']]);
         }
 
-        $user->setUserInfo($this->userRepository->getUserInfo($user->getUsername()));
+        $user->setUserInfo($this->userRepository->getUserInfo($user->getId()));
         $_SESSION['user'] = $user;
 
         if($user->getGroupID() === 2) {
@@ -70,7 +70,7 @@ class SecurityController extends AppController
 
 
         //GroupID === 2 -> student, 1 for teachers
-        $user = new Users(0,2, $Name, $Surname, $Email, $Username, md5(md5($Password)));
+        $user = new Users(1,2, $Name, $Surname, $Email, $Username, md5(md5($Password)));
 
         $this->userRepository->register($user);
 
@@ -78,7 +78,7 @@ class SecurityController extends AppController
 
     }
 
-    public function registerTeacher() {
+    public function register() {
 
         $this->ifPost();
 
@@ -87,9 +87,15 @@ class SecurityController extends AppController
         $Email = $_POST['Email'];
         $Username = $_POST['Username'];
         $Password = $_POST['Password'];
+        $AccountType = $_POST['AccountType'];
 
         //GroupID === 2 -> student, 1 for teachers
-        $user = new Users(0,1, $Name, md5(md5($Surname)), $Email, $Username, $Password);
+
+        if(empty($AccountType))
+            return $this->render('registerAccount',  ['messages' => ['Please select your account type']]);
+
+        $user = new Users(0, $AccountType, $Name, $Surname, $Email, $Username, md5(md5($Password)));
+
 
         $this->userRepository->register($user);
 
