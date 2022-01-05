@@ -11,6 +11,8 @@
         private string $Username;
         private string $Password;
         private ?User_info $user_info;
+        private ?array $availability;
+
 
         public function __construct(int $id, int $GroupID, string $Name, string $Surname, string $email, string $Username, string $Password)
         {
@@ -22,6 +24,24 @@
             $this->Username = $Username;
             $this->Password = $Password;
         }
+
+        /**
+         * @return array|null
+         */
+        public function getAvailability(): ?array
+        {
+            return $this->availability;
+        }
+
+        /**
+         * @param array|null $availability
+         */
+        public function setAvailability(?array $availability): void
+        {
+            $this->availability = $availability;
+        }
+
+
 
         /**
          * @return User_info

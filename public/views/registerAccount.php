@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="public/styles/teacherSignInMainStyle.css">
+    <link rel="stylesheet" type="text/css" href="public/styles/registerAccountStyle.css">
     <title>
         Projekt PAI
     </title>
@@ -15,13 +15,13 @@
 
 
     <div class="form">
-        <p class="text">Pracuj z nami</p>
-        <form class="adding" action="registerTeacher" method="post">
-                <?php
-                if(isset($messages))
-                    foreach ($messages as $message)
-                        echo $message;
-                ?>
+        <p class="text">Pracuj z nami<br/><?php
+            if(isset($messages))
+                foreach ($messages as $message)
+                    echo $message;
+            ?></p>
+        <form class="adding" action="register" method="post">
+
             <input name="Name" type="text" class="regInput" placeholder="Imię">
             <input name="Surname" type="text" class="regInput" placeholder="Nazwisko">
             <input name="Email" type="text" class="regInput" placeholder="Adres email">
@@ -29,8 +29,8 @@
             <input name="Password" type="password" class="regInput" placeholder="Hasło">
                 <!--dodac inputa z wyborem konta -->
             <div class="choose">
-                <span>Student <input type="radio" value="1" name="accountType"/></span>
-                <span>Nauczyciel <input type="radio" value="2" name="accountType"/></span>
+                <span>Student <input type="radio" value="1" name="AccountType"/></span>
+                <span>Nauczyciel <input type="radio" value="2" name="AccountType"/></span>
 
             </div>
                 <div class="buttons">

@@ -23,17 +23,16 @@ class UserRepository extends Repository
 
     public function register(Users $user) {
         $stmt = $this->database->connect()->prepare(
-            'INSERT INTO "Users" ("id", "GroupID", "Name", "Surname", "Email", "Username", "Password") VALUES (?, ?, ?, ?, ?, ?)');
+            'INSERT INTO "Users" ("GroupID", "Name", "Surname", "Email", "Username", "Password") VALUES (?, ?, ?, ?, ?, ?)');
 
-        $stmt->execute([$user->getId(), $user->getGroupID(), $user->getName(), $user->getSurname(), $user->getEmail(), $user->getUsername(), $user->getUsername()]);
+        $stmt->execute([$user->getGroupID(), $user->getName(), $user->getSurname(), $user->getEmail(), $user->getUsername(), $user->getPassword()]);
     }
 
-    public function getUserInfo(String $username): ?User_info {
-        $stmt = $this->database->connect()->prepare('SELECT ui."City", ui."Description"
-                                                            from "User_Info" as ui natural join "Users" as u
-                                                                where "Username" like :username ');
-        $stmt->bindParam(':username', $username, PDO::PARAM_STR);
+    public function getUserInfo(int $id): ?User_info {
+        $stmt = $this->database->connect()->prepare('select "City", "Description" from "User_Info" where "UserID" = :id');
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
+
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if($result == false) {
@@ -46,11 +45,20 @@ class UserRepository extends Repository
 
     public function addInfo(int $id, string $City, string $Description) {
 
+        $ifExist = $this->database->connect()->prepare('select "UserID" from "User_Info" where "UserID" = :id');
+        $ifExist->bindParam(':id', $id, PDO::PARAM_INT);
+        $ifExist->execute();
+
+        if($ifExist->rowCount() == 0) {
+            $add = $this->database->connect()->prepare('INSERT INTO "User_Info" ("UserID") values (?)');
+            $add->execute([$id]);
+        }
+
         $stmt = $this->database->connect()->prepare(
-            'INSERT INTO "User_Info" ("UserID", "City", "Description") VALUES (?, ?, ?)');
+            'update "User_Info" set "City" = ?, "Description" = ? where "UserID" = ?');
 
 
-        $stmt->execute([$id, $City, $Description]);
+        $stmt->execute([$City, $Description, $id]);
     }
 
     public function updateInfo(int $id, string $City, string $Description) {

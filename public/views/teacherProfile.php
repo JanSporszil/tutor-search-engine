@@ -16,26 +16,31 @@
 
     <div class="content">
         <div class="leftSide">
+            <div class="left">
             <div class="profilePic">
 
             </div>
 
             <div class="name&Surname">
-
+                <textarea class="nameArea" disabled><?php echo $_SESSION['user']->getName()." ".$_SESSION['user']->getSurname(); ?></textarea>
             </div>
 
             <div class="city">
-                <p><?php if($userInfo == null || $userInfo->getCity() == "")
+                <textarea class="cityArea" disabled><?php if($userInfo == null || $userInfo->getCity() == "")
                         echo "Nie wybrano miasta";
                     else
                         echo $userInfo->getCity();
-                    ?></p>
+                    ?></textarea>
             </div>
 
             <div class="acceptDiv">
-                <button class="acceptButton">Zatwierdź zmiany</button>
+                <a href="editProfile"><button class="acceptButton">Edytuj profil</button></a>
             </div>
 
+            <form class="logout" action="logout" method="post">
+                <button class="logoutButton" type="submit">Wyloguj</button>
+            </form>
+            </div>
         </div>
 
         <div class="rightSide">
@@ -48,7 +53,7 @@
             </div>
 
             <div class="subjects">
-
+                <p class="subjectList">TODO DODAC WYPISYWANIE Z BAZY Kliknij, aby dodać przedmioty</p>
             </div>
 
             <div class="classesAvailable">

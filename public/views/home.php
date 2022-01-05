@@ -13,9 +13,8 @@
             <p class="logo">SQUANCHU</p>
 
             <div class="buttons">
-                <button class="pracuj" value="PRACUJ U NAS">PRACUJ U NAS</button>
-                <button class="logowanie" value="ZALOGUJ SIĘ">ZALOGUJ SIĘ</button>
-                <button class="rejestracja" value="ZAREJESTRUJ SIĘ">ZAREJESTRUJ SIĘ</button>
+                <a href="registerAccount"><button class="pracuj" value="ZAREJESTRUJ SIĘ">ZAREJESTRUJ SIĘ</button></a>
+                <a href="login"><button class="logowanie" value="ZALOGUJ SIĘ">ZALOGUJ SIĘ</button></a>
             </div>
 
         </div>

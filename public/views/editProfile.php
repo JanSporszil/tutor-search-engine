@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="public/styles/teacherSignInSubjStyles.css">
+    <link rel="stylesheet" type="text/css" href="public/styles/editProfileStyle.css">
     <title>
         Projekt PAI
     </title>
@@ -16,9 +16,9 @@
 
     <div class="form">
         <form class="addDescription" action="addInfoCont" method="post">
-            <p class="text">Pracuj z nami</p>
+            <p class="text">Edytuj swoj profil</p>
 
-            <select name="City" class="selectSubj">
+            <select name="City" class="selectCity">
                 <option value="" selected disabled hidden>Wybierz miasto</option>
                 <option value="Krakow">Krakow</option>
                 <option value="Warszawa">Warszawa</option>

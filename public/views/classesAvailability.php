@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <script type="text/javascript" src="public/assets/js/teacherAvailability.js"></script>
     <link rel="stylesheet" type="text/css" href="public/styles/classesAvailability.css">
     <title>
         Projekt PAI
@@ -16,7 +17,11 @@
     <div class="content">
 
         <div class="addingAvailability">
-
+            <p><?php
+            if(isset($messages))
+                foreach ($messages as $message)
+                    echo $message;
+                ?></p>
             <select class="selectDay">
                 <option value="" selected disabled hidden>Wybór Dnia</option>
                 <option value="Poniedziałek">Poniedziałek</option>
@@ -45,7 +50,7 @@
                 <option value="20:00-21:00">20:00-21:00</option>
             </select>
 
-            <button class="addButton">Dodaj</button>
+            <button class="addButton" type="submit">Dodaj</button>
 
 
         </div>
@@ -60,6 +65,9 @@
                 <div class="time">
                     7:00-8:00
                 </div>
+                <div class="deleteAvail">
+                    X
+                </div>
             </div>
 
             <div class="disp">
@@ -68,6 +76,9 @@
                 </div>
                 <div class="time">
                     8:00-9:00
+                </div>
+                <div class="deleteAvail">
+                    X
                 </div>
             </div>
 
