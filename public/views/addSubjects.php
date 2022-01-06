@@ -52,14 +52,13 @@
 
                 <select name="subject" class="selectSubj">
                     <option value="" selected disabled hidden>Wybierz przedmiot</option>
-                    <option value="Angielski">Angielski</option>
-                    <option value="Polski">Polski</option>
-                    <option value="Matematyka">Matematyka</option>
-                    <option value="Hiszpanski">Hiszpański</option>
-                    <option value="Chemia">Chemia</option>
-                    <option value="Biologia">Biologia</option>
+                    <?php
+                    if(isset($subjects))
+                        foreach($subjects as $sub){
+                            echo '<option value='.$sub.'>'.$sub.'</option>';
+                        }
+                    ?>
                 </select>
-
                 <div class="buttons">
 
                     <button class="deleteSubjectButton" type="submit">

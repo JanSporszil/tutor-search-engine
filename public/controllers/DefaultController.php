@@ -69,28 +69,29 @@ class DefaultController extends AppController {
 
     public function addSubjects() {
 
+        $teacherRepository = new TeacherRepository();
+        $user = $_SESSION['user'];
+        $subjects = $teacherRepository->readSubjects($user->getId());
+        $unserialized = unserialize($subjects);
+
         if(isset($_POST['subject'])) {
-            $teacherRepository = new TeacherRepository();
+
             $subject = $_POST['subject'];
 
-            $user = $_SESSION['user'];
-
-            $subjects = $teacherRepository->readSubjects($user->getId());
-
-            $unserialized = unserialize($subjects);
             if (!is_array($unserialized))
                 $unserialized = array();
 
             if (!in_array($subject, $unserialized))
                 $unserialized[] = $subject;
 
-
             $sendArray = serialize($unserialized);
-
             $teacherRepository->pushSubjects($user->getId(), $sendArray);
         }
-        $subjects = unserialize($teacherRepository->readSubjects($user->getId()));
-        $this->render('addSubjects', ['messages' => ['Wybierz swoje przedmioty'], 'subjects' => $subjects ]);
+
+        $this->render('addSubjects', [
+            'messages' => ['Wybierz swoje przedmioty'],
+            'subjects' => $unserialized
+        ]);
     }
 
 }

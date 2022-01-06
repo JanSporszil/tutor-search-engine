@@ -27,7 +27,11 @@ class TeacherController extends AppController
 
         $unserialized = unserialize($availability);
 
-        $unserialized[$day] = $hour;
+        if(!array_key_exists($day, $unserialized))
+            $unserialized[$day] = [];
+
+        if(!in_array($hour, $unserialized[$day]))
+            $unserialized[$day][] = $hour;
 
         $sendArray = serialize($unserialized);
 

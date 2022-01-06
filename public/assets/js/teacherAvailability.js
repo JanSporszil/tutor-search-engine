@@ -17,5 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 .then(res => res.json())
                 .then(res => console.log(res))
         }
+
+        [...document.querySelectorAll('option[selected]')].forEach(element => element.selected = true);
+
+
     })
 })

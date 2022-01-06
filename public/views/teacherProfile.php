@@ -52,6 +52,7 @@
                     ?></textarea>
             </div>
 
+
             <div class="subjects">
                 <p class="subjectList"><?php if($subjects == null || $user->getSubjects() == "")
                         echo "Tutaj są twoje przedmioty";
@@ -65,6 +66,7 @@
                         echo $array[$size-1];
                     }
                     ?></p>
+                <a href="addSubjects"> <button class="chooseSub">Wybierz przedmioty</button> </a>
             </div>
 
             <div class="classesAvailable">
