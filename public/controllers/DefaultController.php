@@ -56,7 +56,15 @@ class DefaultController extends AppController {
     }
 
     public function classesAvailability() {
-        $this->render('classesAvailability');
+
+        $teacherRepository = new TeacherRepository();
+        $user = $_SESSION['user'];
+
+        $availability = unserialize($teacherRepository->getAvail($user->getId()));
+
+        $this->render('classesAvailability', [
+            'availability' => $availability
+        ]);
     }
 
     public function searchClasses() {

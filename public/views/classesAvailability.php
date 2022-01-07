@@ -3,6 +3,7 @@
 <head>
     <script type="text/javascript" src="public/assets/js/teacherAvailability.js"></script>
     <link rel="stylesheet" type="text/css" href="public/styles/classesAvailability.css">
+    <script src="https://kit.fontawesome.com/9ec5fd34a1.js" crossorigin="anonymous"></script>
     <title>
         Projekt PAI
     </title>
@@ -34,9 +35,9 @@
 
             <select class="selectTime">
                 <option class="option" value="" selected disabled hidden>Wybór Godziny</option>
-                <option class="option" value="7:00-8:00">7:00-8:00</option>
-                <option class="option" value="8:00-9:00">8:00-9:00</option>
-                <option class="option" value="9:00-10:00">9:00-10:00</option>
+                <option class="option" value="07:00-08:00">07:00-08:00</option>
+                <option class="option" value="08:00-09:00">08:00-09:00</option>
+                <option class="option" value="09:00-10:00">09:00-10:00</option>
                 <option class="option" value="10:00-11:00">10:00-11:00</option>
                 <option class="option" value="11:00-12:00">11:00-12:00</option>
                 <option class="option" value="12:00-13:00">12:00-13:00</option>
@@ -57,31 +58,52 @@
 
 
         <div class="displayAvailability">
-            <div class="disp">
+            <table class="availTable">
+            <?php
+            if(isset($availability) && is_array($availability)){
 
-                <div class="day">
-                    Poniedziałek
-                </div>
-                <div class="time">
-                    7:00-8:00
-                </div>
-                <div class="deleteAvail">
-                    X
-                </div>
-            </div>
+                uksort($availability, function($a, $b) {
+                    $day = [
+                        "Poniedziałek" => 1,
+                        "Wtorek" => 2,
+                        "Środa" => 3,
+                        "Czwartek" => 4,
+                        "Piątek" => 5,
+                        "Sobota" => 6
+                    ];
+                    return $day[$a] > $day[$b];
+                });
 
-            <div class="disp">
-                <div class="day">
-                    Środa
-                </div>
-                <div class="time">
-                    8:00-9:00
-                </div>
-                <div class="deleteAvail">
-                    X
-                </div>
-            </div>
+                $days = array_keys($availability);
+                $size = -1;
 
+                //table header
+                echo '<tr class="head">';
+                foreach ($days as $day) {
+                    $size2 = count($availability[$day]);
+                    if($size < $size2)
+                        $size = $size2;
+                    echo '<th>'.$day.'</th>';
+                    sort($availability[$day]);
+                }
+                echo '</tr>';
+
+                //table hours
+                //echo "</br>";
+                for($i = 0; $i<$size;$i++){
+                    echo '<tr>';
+                    foreach ($availability as $day => $hour){
+                        echo '<td>';
+                        $hour = array_shift($availability[$day]);
+                        echo ($hour)?'<span class="hour" data-day="'.$day.'">'.$hour.'</span><i class="far fa-times-circle"></i>' : '';
+                        echo '</td>';
+                    }
+                    echo '</tr>';
+                }
+
+                }
+            ?>
+            </table>
         </div>
 
 

@@ -187,15 +187,23 @@ body {
 }
 
 .classesAvailable {
+    margin: 20px auto 0;
+    width: 350px;
+    display: flex;
+}
+
+.availButton {
     font-family: Alegreya, sans;
-    margin: 30px auto 0 100px;
     height: 50px;
-    width: 700px;
-    background-color: #E9E3E3;
+    width: 350px;
+    background-color: rgba(0,0,0,0.30);
     border: 0;
     border-radius: 10px;
+    color: white;
+    font-size: 16px;
     box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
 }
+
 .logout {
     margin: 20px auto 0;
     width: 350px;

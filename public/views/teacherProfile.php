@@ -37,6 +37,10 @@
                 <a href="editProfile"><button class="acceptButton">Edytuj profil</button></a>
             </div>
 
+                <div class="classesAvailable">
+                    <a href="classesAvailability"><button class="availButton">Dyspozycja</button> </a>
+                </div>
+
             <form class="logout" action="logout" method="post">
                 <button class="logoutButton" type="submit">Wyloguj</button>
             </form>
@@ -69,9 +73,7 @@
                 <a href="addSubjects"> <button class="chooseSub">Wybierz przedmioty</button> </a>
             </div>
 
-            <div class="classesAvailable">
 
-            </div>
 
         </div>
 
