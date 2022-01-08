@@ -2,6 +2,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="public/styles/addSubjectStyle.css">
+    <script type="text/javascript" src="public/assets/js/deleteSubject.js"></script>
     <title>
         Projekt PAI
     </title>
@@ -50,18 +51,18 @@
             <form class="subjects" action="deleteSubjects" method="post">
                 <p class="text">Twoje przedmioty. Możesz je tutaj usunąć</p>
 
-                <select name="subject" class="selectSubj">
-                    <option value="" selected disabled hidden>Wybierz przedmiot</option>
+                <select name="subject" class="selectSubj" id="subToDelete">
+                    <option class="delete" value="" selected disabled hidden>Wybierz przedmiot</option>
                     <?php
                     if(isset($subjects))
                         foreach($subjects as $sub){
-                            echo '<option value='.$sub.'>'.$sub.'</option>';
+                            echo '<option class="delete" value='.$sub.'>'.$sub.'</option>';
                         }
                     ?>
                 </select>
                 <div class="buttons">
 
-                    <button class="deleteSubjectButton" type="submit">
+                    <button class="deleteSubjectButton">
                         Usuń
                     </button>
 

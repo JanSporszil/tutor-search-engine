@@ -38,12 +38,26 @@ class TeacherController extends AppController
         $this->teacherRepository->addAvail($user->getId(), $sendArray);
     }
 
-    public function getAvailability () {
-        //TODO dodac wyswietlanie informacji na stronie
+    public function deleteSubjects(){
+        $subject = $_POST['subject'];
+        $user = $_SESSION['user'];
+
+        $availability = $this->teacherRepository->readSubjects($user->getId());
+
+        $toDelete = unserialize($availability);
+
+        if(($key = array_search($subject, $toDelete)) !== false)
+            unset($toDelete[$key]);
+
+        $sendArray = serialize($toDelete);
+
+        $this->teacherRepository->pushSubjects($user->getId(), $sendArray);
+
+        $this->render("addSubjects", [
+            'messages' => ['Wybierz swoje przedmioty'],
+            'subjects' => $toDelete
+        ]);
     }
 
-    public function getSubjects() {
-        //TODO dodac wyswietlanie w selecie na stronie
-    }
 
 }

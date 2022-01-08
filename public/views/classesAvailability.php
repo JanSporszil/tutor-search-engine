@@ -90,6 +90,9 @@
 
                 //table hours
                 //echo "</br>";
+
+                //TODO DODAC USUNWANIE GODZINY -> PRZEKAZAC DO CONTROLLERA GDZIE USUNIE Z TABLICY I WRZUCI JA DO BAZY :)
+
                 for($i = 0; $i<$size;$i++){
                     echo '<tr>';
                     foreach ($availability as $day => $hour){

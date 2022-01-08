@@ -26,6 +26,7 @@ Routing::post('register', 'SecurityController');
 Routing::post('logout', 'SecurityController');
 Routing::post('addInfoCont', 'UserController');
 Routing::post('addAvailability', 'TeacherController');
+Routing::post('deleteSubjects', 'TeacherController');
 
 
 
