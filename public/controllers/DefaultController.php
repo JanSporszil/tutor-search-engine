@@ -19,7 +19,7 @@ class DefaultController extends AppController {
     }
 
     public function registerAccount() {
-        $this->render('registerAccount');
+        $this->render('registerAccount', ['messages' => ['Zarejestruj konto']]);
     }
 
     public function editProfile() {

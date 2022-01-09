@@ -15,7 +15,7 @@
 
 
     <div class="form">
-        <p class="text">Pracuj z nami<br/><?php
+        <p class="text"><?php
             if(isset($messages))
                 foreach ($messages as $message)
                     echo $message;

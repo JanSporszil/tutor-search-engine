@@ -2,6 +2,7 @@
 
 <head>
     <script type="text/javascript" src="public/assets/js/teacherAvailability.js"></script>
+    <script type="text/javascript" src="public/assets/js/deleteAvailability.js"></script>
     <link rel="stylesheet" type="text/css" href="public/styles/classesAvailability.css">
     <script src="https://kit.fontawesome.com/9ec5fd34a1.js" crossorigin="anonymous"></script>
     <title>

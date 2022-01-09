@@ -38,6 +38,10 @@ class TeacherController extends AppController
         $this->teacherRepository->addAvail($user->getId(), $sendArray);
     }
 
+    public function deleteAvailability() {
+        
+    }
+
     public function deleteSubjects(){
         $subject = $_POST['subject'];
         $user = $_SESSION['user'];
