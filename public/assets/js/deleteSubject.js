@@ -16,7 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 .then(res => console.log(res))
         }
 
-        [...document.querySelectorAll('option[selected]')].forEach(element => element.selected = true);
+        [...document.querySelectorAll('option')].forEach(element => {
+            if(element.value == "")
+            element.selected = true;
+            console.log(element, select1);
+            if(element.value == select1){
+                element.remove();
+            }
+        });
 
 
     })

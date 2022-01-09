@@ -39,7 +39,28 @@ class TeacherController extends AppController
     }
 
     public function deleteAvailability() {
-        
+        $day = $_POST['day'];
+        $hour = $_POST['hour'];
+
+        $user = $_SESSION['user'];
+
+        $availability = $this->teacherRepository->getAvail($user->getId());
+
+        $toDelete = unserialize($availability);
+
+        if(($value = array_search($hour, $toDelete[$day])) !== false) {
+            unset($toDelete[$day][$value]);
+            if(empty($toDelete[$day]))
+                unset($toDelete[$day]);
+        }
+
+        $sendArray = serialize($toDelete);
+
+        $this->teacherRepository->addAvail($user->getId(), $sendArray);
+
+        $this->render('classesAvailability', [
+            'availability' => $toDelete
+        ]);
     }
 
     public function deleteSubjects(){
@@ -57,7 +78,7 @@ class TeacherController extends AppController
 
         $this->teacherRepository->pushSubjects($user->getId(), $sendArray);
 
-        $this->render("addSubjects", [
+        $this->render('addSubjects', [
             'messages' => ['Wybierz swoje przedmioty'],
             'subjects' => $toDelete
         ]);

@@ -122,7 +122,7 @@ class SecurityController extends AppController
 
         $AccountType = $_POST['AccountType'];
 
-        //GroupID === 2 -> student, 1 for teachers
+
 
         $this->validate($Name, NAME_REQ);
         $this->validate($Surname, SURNAME_REQ);
@@ -135,15 +135,13 @@ class SecurityController extends AppController
         $this->validate($Username, USERNAME_REQ);
 
 
-        //sprawdzenie dla passworda regex
-
         if(!$this->password_strength_check($Password)){
             $this->render('registerAccount', ['messages' => [PASSWORD_REQ]]);
             die();
         }
 
 
-
+        //GroupID === 2 -> student, 1 for teachers
         if(empty($AccountType))
             return $this->render('registerAccount',  ['messages' => ['Please select your account type']]);
 

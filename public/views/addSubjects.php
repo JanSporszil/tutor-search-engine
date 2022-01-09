@@ -62,7 +62,7 @@
                 </select>
                 <div class="buttons">
 
-                    <button class="deleteSubjectButton">
+                    <button class="deleteSubjectButton" type="button">
                         Usuń
                     </button>
 
