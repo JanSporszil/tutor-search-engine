@@ -3,6 +3,7 @@
 require_once 'AppController.php';
 require_once __DIR__.'/../repository/UserRepository.php';
 require_once __DIR__.'/../repository/TeacherRepository.php';
+require_once __DIR__.'/../repository/ClassesRepository.php';
 
 class DefaultController extends AppController {
 
@@ -44,7 +45,8 @@ class DefaultController extends AppController {
         $repository = new UserRepository();
         $teacherRepository = new TeacherRepository();
         $subjects = unserialize($teacherRepository->readSubjects($user->getId()));
-        $user->setSubjects($subjects);
+        if(is_array($subjects))
+            $user->setSubjects($subjects);
         $userinfo = $repository->getUserInfo($user->getId());
         $user->setUserInfo($userinfo);
         $_SESSION['user'] = $user;

@@ -63,11 +63,12 @@
                     else{
                         $array = $user->getSubjects();
                         $size = sizeof($array);
-                        for($i = 0; $i < $size-1; $i++) {
-                            echo $array[$i];
+                        echo $array[0];
+                        for($i = 1; $i < $size; $i++) {
                             echo ", ";
+                            echo $array[$i];
                         }
-                        echo $array[$size-1];
+                        echo $array[$size].".";
                     }
                     ?></p>
                 <a href="addSubjects"> <button class="chooseSub">Wybierz przedmioty</button> </a>

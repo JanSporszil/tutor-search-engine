@@ -14,7 +14,13 @@
 <div class="container">
     <div class="header">
         <p class="logo">SQUANCHU</p>
+
+        <div class="buttons">
+            <a href="teacherProfile"><button class="profile" value="teacherProfile">teacherProfile</button></a>
+        </div>
     </div>
+
+
 
     <div class="content">
 

@@ -1,7 +1,6 @@
 <?php
 
 
-
     class Users {
         private int $id;
         private int $GroupID;

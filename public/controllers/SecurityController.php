@@ -22,7 +22,7 @@ class SecurityController extends AppController
     }
 
 
-    public function login() {
+    public function signIn() {
 
         $url = "http://$_SERVER[HTTP_HOST]";
 

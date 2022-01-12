@@ -24,7 +24,7 @@
 
             <div class="loginSide">
                 <div class="formDiv">
-                <form class="form" action="login" method="post">
+                <form class="form" action="signIn" method="post">
                     <?php
                     if(isset($messages))
                         foreach ($messages as $message)
