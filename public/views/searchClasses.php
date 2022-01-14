@@ -2,6 +2,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="public/styles/searchClasses.css">
+    <script type="text/javascript" src="public/assets/js/getTeacherID.js"></script>
     <title>
         Projekt PAI
     </title>
@@ -17,11 +18,11 @@
         <div class="area">
             <div class="searching">
                 <div class="subjSearch">
-                    <input type="text" class="subjSearching" value="Przedmiot">
+                    <input type="text" class="subjSearching" placeholder="Przedmiot">
                 </div>
 
                 <div class="citySearch">
-                    <input type="text" class="citySearching" value="Miasto">
+                    <input type="text" class="citySearching" placeholder="Miasto">
                 </div>
             </div>
 
@@ -33,7 +34,7 @@
                     foreach ($classesAvailability as $class) {
 
                         ?>
-                <div class="teacher" id="<?= $class['id'] ?>">
+                <div class="teacher">
                     <div class="leftSide">
                         <div class="picture">
 
@@ -42,8 +43,7 @@
                     <div class="teacherInfo">
                         <div class="upper">
                             <div class="name&surname">
-                                <p class="name"><?= $class['Name']." ".$class['Surname'];
-
+                                <p class="name"> <?= $class['Name']." ".$class['Surname'];
                                 ?></p>
                             </div>
 
@@ -55,11 +55,18 @@
                                     ?></p>
                             </div>
                         </div>
+
                         <div class="descRam">
+
                             <div class="description">
                                 <p class="desc"><?= $class['Description'];
                                 ?></p>
                             </div>
+
+                            <div class="enroll">
+                                <a href="bookClasses/<?= $class['id']; ?>"><button type="button" class="enrollButton">Wybierz</button></a>
+                            </div>
+
                         </div>
                     </div>
 

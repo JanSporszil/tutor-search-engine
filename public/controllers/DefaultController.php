@@ -73,10 +73,6 @@ class DefaultController extends AppController {
         $this->render('searchClasses');
     }
 
-    public function bookClasses() {
-        $this->render('bookClasses');
-    }
-
     public function addSubjects() {
 
         $teacherRepository = new TeacherRepository();

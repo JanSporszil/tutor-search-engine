@@ -18,4 +18,24 @@ class ClassesRepository extends Repository
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getInfoAboutBooking(int $id) {
+        $stmt = $this->database->connect()->prepare('select
+         u."Name", u."Surname", ui."City", ui."Description", td."subjects", td."availability" 
+            from "Users" u inner join "teacherDetails" tD on u.id = tD."teacherID" inner join "User_Info" ui on u.id = ui."UserID" where u."id" = :id');
+        $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function pushBookedClasses(int $userid, int $teacherid, string $day, string $hour, string $subject) {
+
+        $stmt = $this->database->connect()->prepare('insert into "subscription" ("teacherID", "studentID", "day", "hour", "subject") values (?, ?, ?, ?, ?)');
+        $stmt->execute([$teacherid, $userid, $day, $hour, $subject]);
+
+    }
+
+
+
+
 }

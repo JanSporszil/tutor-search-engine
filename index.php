@@ -15,12 +15,15 @@ Routing::get('editProfile', 'DefaultController');
 Routing::get('studentProfile', 'DefaultController');
 Routing::get('teacherProfile', 'DefaultController');
 Routing::get('classesAvailability', 'DefaultController');
-//Routing::get('searchClasses', 'DefaultController');
-Routing::get('bookClasses', 'DefaultController');
+Routing::get('bookClasses', 'ClassesController');
 Routing::get('addSubjects', 'DefaultController');
 Routing::get('signIn', 'SecurityController');
 Routing::get('login', 'DefaultController');
 Routing::get('getClasses', 'ClassesController');
+Routing::get('getBookedClasses', 'ClassesController');
+Routing::get('bookingClasses', 'ClassesController');
+
+
 
 Routing::post('registerStudent', 'SecurityController');
 Routing::post('register', 'SecurityController');
