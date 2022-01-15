@@ -25,11 +25,13 @@
             <div class="loginSide">
                 <div class="formDiv">
                 <form class="form" action="signIn" method="post">
+                    <p class="message">
                     <?php
                     if(isset($messages))
                         foreach ($messages as $message)
                             echo $message;
                     ?>
+                    </p>
                     <input name ="Username" type="text" class="loginInp" placeholder="Login">
                     <input name="Password" type="password" class="passwInp" placeholder="Haslo">
                     <div class="buttonDiv">

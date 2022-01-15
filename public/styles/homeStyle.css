@@ -18,7 +18,7 @@ body {
 }
 
 .header {
-    height: 10vh;
+    height: 10%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -42,13 +42,13 @@ body {
 
 .content {
     width: 100%;
-    height: 90vh;
+    height: 90%;
     display:flex;
     flex-direction: row;
 }
 
 .textSide {
-    height:90vh;
+    height:90%;
     width:50%;
 }
 
@@ -113,7 +113,7 @@ body {
 }
 
 .picSide {
-    height: 90vh;
+    height: 90%;
     width: 50%;
     margin:0 auto;
 }
@@ -231,4 +231,179 @@ body {
     bottom: 30px;
     z-index: 1;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo{
+        font-size: 80px;
+    }
+
+    .buttons {
+        padding-right: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logowanie {
+        width: 190px;
+        height: 40px;
+        text-align: center;
+        font-family: Alegreya, sans;
+        font-size: 15px;
+        border: 0;
+        border-radius: 1em;
+        justify-self: flex-end;
+        box-shadow: 0 8px 5px rgb(0 0 0 / 30%);
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+    .textSide{
+        margin-top: 10%;
+        width:100%;
+        height: 50%;
+    }
+
+    .textArea {
+        display: flex;
+        justify-content: center;
+        font-family: Alegreya, sans;
+        margin-top: 0;
+        text-align: center;
+        font-size: 33px;
+    }
+
+
+    .picSide{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 50%;
+        margin: 0 auto;
+    }
+
+    .pic-main {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .firstPic {
+        height: 400px;
+        width: 130px;
+        background-color: red;
+        margin-right: 7vw;
+        border: 1px white solid;
+        border-radius: 50px;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 6px 5px rgb(0 0 0 / 30%);
+        margin-left: 0;
+    }
+
+    .firstCom {
+        font-family: Alegreya, sans;
+        text-align: center;
+        height: 130px;
+        width: 130px;
+        background-color: #E9E3E3;
+        margin-right: 7vw;
+        border-radius: 100%;
+        position: relative;
+        bottom: 30px;
+        z-index: 1;
+        box-shadow: 0 8px 5px rgb(0 0 0 / 30%);
+        margin-left: 0;
+    }
+
+    .secondPic {
+        height: 400px;
+        width: 130px;
+        background-color: red;
+        margin-right: 7vw;
+        border: 1px white solid;
+        border-radius: 50px;
+        flex-direction: row;
+        margin-top:100px;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .secondCom {
+        font-family: Alegreya, sans;
+        text-align: center;
+        height: 130px;
+        width: 130px;
+        background-color: #E9E3E3;
+        margin-right: 7vw;
+        border-radius: 100%;
+        position: absolute;
+        top:0;
+        z-index: 1;
+        box-shadow: 0 8px 5px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .thirdPic {
+        height: 400px;
+        width: 130px;
+        background-color: red;
+        border: 1px white solid;
+        border-radius: 50px;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 6px 5px rgb(0 0 0 / 30%);
+        margin-right: 0;
+    }
+
+    .thirdCom {
+        font-family: Alegreya, sans;
+        text-align: center;
+        height: 130px;
+        width: 130px;
+        background-color: #E9E3E3;
+        border-radius: 100%;
+        position: relative;
+        bottom: 30px;
+        z-index: 1;
+        box-shadow: 0 8px 5px rgb(0 0 0 / 30%);
+        margin-right: 0;
+    }
+
+    .textComOdd {
+        padding-top: 50px;
+        text-align: center;
+        height: 130px;
+        width: 130px;
+        font-size: 12px;
+    }
+
+    .textComEven {
+        padding-top: 30px;
+        text-align: center;
+        height: 130px;
+        width: 130px;
+        font-size: 12px;
+    }
+
+    .message {
+        font-size: 34px;
+    }
+
+
 }
