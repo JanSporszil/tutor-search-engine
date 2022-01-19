@@ -29,8 +29,8 @@
             <input name="Password" type="password" class="regInput" placeholder="Hasło">
                 <!--dodac inputa z wyborem konta -->
             <div class="choose">
-                <span>Student <input type="radio" value="1" name="AccountType"/></span>
-                <span>Nauczyciel <input type="radio" value="2" name="AccountType"/></span>
+                <span>Student <input class="radio" type="radio" value="1" name="AccountType"/></span>
+                <span>Nauczyciel <input class="radio" type="radio" value="2" name="AccountType"/></span>
 
             </div>
                 <div class="buttons">

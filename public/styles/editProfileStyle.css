@@ -146,4 +146,97 @@ body {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
+@media only screen and (max-width: 1200px) {
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo{
+        font-size: 80px;
+    }
+
+    .text {
+        font-family: Alegreya, sans;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 550;
+    }
+
+    .selectCity {
+        font-family: Alegreya, sans;
+        font-size: 30px;
+        height: 125px;
+        width: 80%;
+        text-align: center;
+        border: 0;
+        border-radius: 50px;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 3px 5px rgb(0 0 0 / 30%);
+        background-color: #E9E3E3;
+    }
+
+    .regDescription {
+        font-family: Alegreya, sans;
+        font-size: 40px;
+        height: 250px;
+        width: 80%;
+        text-align: center;
+        border: 0;
+        border-radius: 50px;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 3px 5px rgb(0 0 0 / 30%);
+        background-color: #E9E3E3;
+    }
+
+    .buttons {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .cancelButt {
+        font-family: Alegreya, sans;
+        margin-top: 20px;
+        font-size: 28px;
+        /* margin-left: auto; */
+        /* margin-right: auto; */
+        height: 100px;
+        width: 30%;
+        text-align: center;
+        border: 0;
+        border-radius: 50px;
+        background-color: rgba(255,15,0,0.4);
+        color: white;
+        box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+    }
+
+    .registerButt {
+        font-family: Alegreya, sans;
+        margin-top: 20px;
+        font-size: 28px;
+        /* margin-left: auto; */
+        /* margin-right: auto; */
+        height: 100px;
+        width: 30%;
+        text-align: center;
+        border: 0;
+        border-radius: 50px;
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+        box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+    }
+
+
+
+}
 

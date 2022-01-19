@@ -48,6 +48,8 @@
         </div>
 
         <div class="rightSide">
+
+            <div class="right">
             <div class="description">
                 <textarea class="textArea" disabled><?php if($userInfo == null || $userInfo->getDescription() == "")
                         echo "Twój opis. Możesz go edytować.";
@@ -74,6 +76,7 @@
                 <a href="addSubjects"> <button class="chooseSub">Wybierz przedmioty</button> </a>
             </div>
 
+            </div>
 
 
         </div>
