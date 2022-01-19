@@ -17,8 +17,8 @@
     <div class="content">
         <div class="leftSide">
             <div class="left">
-            <div class="profilePic">
-
+            <div class="profilePic" hidden>
+                <!-- miejsce przeznaczone na zdjecie profilowe, zostanie dodane -->
             </div>
 
             <div class="name&Surname">
@@ -34,8 +34,13 @@
             </div>
 
             <div class="acceptDiv">
-                <a href="editProfile"><button class="acceptButton">Edytuj profil</button></a>
+                <a href="/editProfile"><button class="acceptButton">Edytuj profil</button></a>
             </div>
+
+            <div class="searchClass">
+                <a href="/getClasses"><button class="searchClassButton">Szukaj zajęć</button></a>
+            </div>
+
 
             <form class="logout" action="logout" method="post">
                 <button class="logoutButton" type="submit">Wyloguj</button>

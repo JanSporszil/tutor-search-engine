@@ -17,9 +17,9 @@
     <div class="content">
         <div class="leftSide">
             <div class="left">
-            <div class="profilePic">
-
-            </div>
+                <div class="profilePic" hidden>
+                    <!-- miejsce przeznaczone na zdjecie profilowe, zostanie dodane -->
+                </div>
 
             <div class="name&Surname">
                 <textarea class="nameArea" disabled><?php echo $_SESSION['user']->getName()." ".$_SESSION['user']->getSurname(); ?></textarea>

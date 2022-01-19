@@ -58,9 +58,14 @@ body {
 }
 
 .left {
-    width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+a {
+    width: 80%;
 }
 
 .profilePic {
@@ -74,8 +79,13 @@ body {
 }
 
 .name\&Surname {
+    width: 100%;
+    margin-top: 50px;
     vertical-align: middle;
     display: table-row;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .name\&Surname nameArea {
@@ -85,7 +95,7 @@ body {
 .nameArea {
     font-family: Alegreya, sans;
     height: 50px;
-    width: 350px;
+    width: 80%;
     background-color: #E9E3E3;
     border: 0;
     border-radius: 10px;
@@ -103,6 +113,9 @@ body {
 .city {
     vertical-align: middle;
     display: table-row;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .city cityArea {
@@ -114,7 +127,7 @@ body {
     vertical-align: middle;
     font-family: Alegreya, sans;
     height: 50px;
-    width: 350px;
+    width: 80%;
     background-color: #E9E3E3;
     border: 0;
     border-radius: 10px;
@@ -125,22 +138,25 @@ body {
     padding-top: 15px;
     font-size: 20px;
 }
+
 .acceptDiv {
     margin: 50px auto 0;
-    width: 350px;
+    width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .acceptButton {
     font-family: Alegreya, sans;
     height: 50px;
-    width: 350px;
+    width: 100%;
     background-color: rgba(0,0,0,0.30);
     border: 0;
     border-radius: 10px;
     color: white;
     font-size: 16px;
     box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+    margin: auto 0;
 }
 
 .rightSide {
@@ -188,14 +204,15 @@ body {
 
 .classesAvailable {
     margin: 20px auto 0;
-    width: 350px;
+    width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .availButton {
     font-family: Alegreya, sans;
     height: 50px;
-    width: 350px;
+    width: 100%;
     background-color: rgba(0,0,0,0.30);
     border: 0;
     border-radius: 10px;
@@ -210,10 +227,17 @@ body {
     display: flex;
 }
 
+.logout {
+    margin: 25px auto 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .logoutButton {
     font-family: Alegreya, sans;
     height: 50px;
-    width: 350px;
+    width: 80%;
     background-color: rgba(255,15,0,0.4);
     border: 0;
     border-radius: 10px;
