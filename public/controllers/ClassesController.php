@@ -20,7 +20,19 @@ class ClassesController extends AppController
 
     public function getClasses() {
 
-        $availableClasses = $this->classesRepository->readClasses();
+        $subject = $_POST['subject'];
+        $city = $_POST['city'];
+
+        $availableClasses = null;
+
+        if($city != "")
+            $availableClasses = $this->classesRepository->readClassesWithCity($city);
+
+        else if($subject != "")
+            $availableClasses = $this->classesRepository->readClassesWithSubject($subject);
+
+        else if($subject != "" && $city != "")
+            $availableClasses = $this->classesRepository->readClasses($city, $subject);
 
 
         $this->render('searchClasses', [

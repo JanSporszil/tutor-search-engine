@@ -65,30 +65,59 @@ body {
     justify-content: space-around;
 }
 
+.selecting{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: center;
+}
+
+.subjSearch {
+    width: 33%;
+}
+
 .subjSearching {
     font-family: Alegreya, sans;
-    font-size:20px;
-    height:50px;
-    width:400px;
+    font-size: 20px;
+    height: 50px;
+    width: 70%;
     text-align: center;
     border: 0;
     border-radius: 10px;
-    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 5px rgb(0 0 0 / 30%);
     background-color: #E9E3E3;
-    margin-right: 150px;
+}
+
+.citySearch {
+    width: 33%;
 }
 
 .citySearching {
-    margin: 0 auto;
     font-family: Alegreya, sans;
-    font-size:20px;
-    height:50px;
-    width:400px;
+    font-size: 20px;
+    height: 50px;
+    width: 70%;
     text-align: center;
     border: 0;
     border-radius: 10px;
-    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 5px rgb(0 0 0 / 30%);
     background-color: #E9E3E3;
+}
+
+.submit {
+    width: 33%;
+}
+
+.submitButton {
+    width: 50%;
+    height: 50px;
+    font-family: Alegreya, sans;
+    font-size:20px;
+    text-align: center;
+    background-color: yellowgreen;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
 }
 
 .teachers {

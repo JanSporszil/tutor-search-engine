@@ -17,13 +17,22 @@
     <div class="content">
         <div class="area">
             <div class="searching">
-                <div class="subjSearch">
-                    <input type="text" class="subjSearching" placeholder="Przedmiot">
-                </div>
 
-                <div class="citySearch">
-                    <input type="text" class="citySearching" placeholder="Miasto">
-                </div>
+                <form class="selecting" action="getClasses" method="post">
+
+                    <div class="subjSearch">
+                        <input name="subject" type="text" class="subjSearching" placeholder="Przedmiot">
+                    </div>
+
+                    <div class="citySearch">
+                        <input name="city" type="text" class="citySearching" placeholder="Miasto">
+                    </div>
+                    <div class="submit">
+                        <button class="submitButton" type="submit">Szukaj</button>
+                    </div>
+
+                </form>
+
             </div>
 
 
