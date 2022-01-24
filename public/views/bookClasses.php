@@ -21,8 +21,8 @@
         <div class="main-content">
 
 
-            <div class="right">
-
+            <div class="left">
+            <div class="paczkaLewa">
                 <div class="picture">
 
                 </div>
@@ -38,11 +38,11 @@
                 <div class="desc">
                     <p><?= $teacherInfo['Description'] ?></p>
                 </div>
-
+            </div>
             </div>
 
 
-            <div class="left">
+            <div class="right">
 
                 <div class="form">
 
@@ -88,7 +88,7 @@
 
                     </select>
 
-                    <a href="/getClasses"><button class="signButton" teacherid="<?= $teacherid; ?>" type="button">Zapisz się</button></a>
+                    <a class="abutton" href="/getClasses"><button class="signButton" teacherid="<?= $teacherid; ?>" type="button">Zapisz się</button></a>
 
                 </div>
 

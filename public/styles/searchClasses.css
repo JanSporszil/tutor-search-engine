@@ -53,9 +53,14 @@ body {
 }
 
 .area {
-    width: 1200px;
+    width: 100%;
     height: 100%;
-    margin:0 auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
 }
 
 .searching {
@@ -63,6 +68,9 @@ body {
     flex-direction: row;
     height: 10%;
     justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 90%;
 }
 
 .selecting{
@@ -74,6 +82,10 @@ body {
 
 .subjSearch {
     width: 33%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
 
 .subjSearching {
@@ -90,6 +102,10 @@ body {
 
 .citySearch {
     width: 33%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
 
 .citySearching {
@@ -106,6 +122,10 @@ body {
 
 .submit {
     width: 33%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
 
 .submitButton {
@@ -122,7 +142,7 @@ body {
 
 .teachers {
     height: 90%;
-    width:100%;
+    width: 87%;
     display: flex;
     flex-direction: column;
     overflow: auto;
@@ -130,7 +150,7 @@ body {
 
 .teacher {
     height: 150px;
-    width: 90%;
+    width: 80%;
     border: 0;
     border-radius: 10px;
     background-color: #E9E3E3;
@@ -154,6 +174,7 @@ body {
     border: 1px black solid;
     border-radius: 100%;
     background-color: cadetblue;
+    visibility: hidden;
 }
 
 .teacherInfo {
@@ -231,7 +252,68 @@ a {
 
 
 .desc {
-    margin: 0;
-    padding: 15px;
+    padding: 10px;
+    font-size: 15px;
+    font-family: 'ALEGREYA', sans;
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        font-size: 80px;
+    }
+
+    .teacher {
+        height: 175px;
+    }
+
+    .subjSearching{
+        width: 75%;
+        height: 100px;
+        font-size: 30px;
+    }
+
+    .citySearching{
+        width: 75%;
+        height: 100px;
+        font-size: 30px;
+    }
+
+    .submitButton{
+        width: 75%;
+        height: 100px;
+        font-size: 30px;
+    }
+
+    .name {
+        font-size: 27px;
+
+    }
+
+    .subject {
+        font-size: 25px;
+    }
+
+    .desc {
+        padding: 15px;
+        font-size: 27px;
+    }
+
+    .enroll{
+        width: 30%;
+    }
+
+    .enrollButton {
+        font-size: 26px;
+    }
 }
 
