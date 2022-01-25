@@ -133,14 +133,19 @@ body {
 .firstPic {
     height:300px;
     width:100px;
-    background-color: red;
+    background-image: url("/public/images/squanch.png");
+    background-repeat: no-repeat;
     margin-left: 150px;
     margin-right: 7vw;
     border: 1px white solid;
     border-radius: 50px;
     position: relative;
     z-index: 2;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: right;
     box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+    background-color: #cccccc;
 }
 
 .firstCom {
@@ -182,7 +187,6 @@ body {
 .secondPic {
     height:300px;
     width:100px;
-    background-color: red;
     margin-right: 7vw;
     border: 1px white solid;
     border-radius: 50px;
@@ -191,6 +195,12 @@ body {
     position: relative;
     z-index: 2;
     box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+    background-image: url("/public/images/squanch.png");
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: right;
+    background-color: gold;
 }
 
 .secondCom {
@@ -210,13 +220,18 @@ body {
 .thirdPic {
     height:300px;
     width:100px;
-    background-color: red;
     margin-right: 7vw;
     border: 1px white solid;
     border-radius: 50px;
     position: relative;
     z-index: 2;
     box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+    background-image: url("/public/images/squanch.png");
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: right;
+    background-color: #cccccc;
 }
 
 .thirdCom {
@@ -304,7 +319,6 @@ body {
     .firstPic {
         height: 400px;
         width: 130px;
-        background-color: red;
         margin-right: 7vw;
         border: 1px white solid;
         border-radius: 50px;
@@ -332,7 +346,6 @@ body {
     .secondPic {
         height: 400px;
         width: 130px;
-        background-color: red;
         margin-right: 7vw;
         border: 1px white solid;
         border-radius: 50px;
@@ -341,6 +354,7 @@ body {
         position: relative;
         z-index: 2;
         box-shadow: 0 6px 5px rgba(0, 0, 0, 0.3);
+        background-color: gold;
     }
 
 
@@ -362,7 +376,6 @@ body {
     .thirdPic {
         height: 400px;
         width: 130px;
-        background-color: red;
         border: 1px white solid;
         border-radius: 50px;
         position: relative;

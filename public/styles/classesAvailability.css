@@ -163,12 +163,16 @@ body {
 }
 
 .flat-table {
-    width: 85%;
+    margin-top: 50px;
+    width: 100%;
     display: block;
     font-family: sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: 115%;
     overflow: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 th {
     background-color: rgb(112, 196, 105);
@@ -269,6 +273,10 @@ td {
         height:100px;
         width: 60%;
         font-size:33px;
+    }
+
+    .flat-table{
+        margin-top: 0;
     }
 
     .displayAvailability{

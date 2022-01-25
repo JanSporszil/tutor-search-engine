@@ -28,7 +28,7 @@
                 <option value="Tarnów">Tarnów</option>
             </select>
 
-            <input name="Description" type="text" class="regDescription" placeholder="Twój opis">
+            <textarea name="Description" type="text" class="regDescription" placeholder="Twój opis"></textarea>
 
             <div class="buttons">
 
