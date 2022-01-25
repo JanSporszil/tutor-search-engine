@@ -10,10 +10,9 @@
 
 <body>
 <div class="container">
-    <div class="header">
-        <p class="logo">SQUANCHU</p>
 
-    </div>
+    <?php include 'headerwithprofile.php'; ?>
+
     <div class="content">
         <div class="area">
             <div class="searching">

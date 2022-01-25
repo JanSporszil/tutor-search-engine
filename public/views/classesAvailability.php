@@ -100,7 +100,7 @@
                     foreach ($availability as $day => $hour){
                         echo '<td>';
                         $hour = array_shift($availability[$day]);
-                        echo ($hour)?'<span class="hourText">'.$hour.'</span><i id="hour" data-day="'.$day.'" data-hour="'.$hour.'" class="far fa-times-circle"></i>' : '';
+                        echo ($hour)?'<span class="hourText">'.$hour." "." "." "." ".'</span><i id="hour" data-day="'.$day.'" data-hour="'.$hour.'" class="far fa-times-circle"></i>' : '';
                         echo '</td>';
                     }
                     echo '</tr>';

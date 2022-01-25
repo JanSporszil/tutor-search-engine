@@ -41,8 +41,9 @@ body {
 }
 
 .buttons {
-    margin-left:auto;
-    margin-right:auto;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
 
 }
 
@@ -121,6 +122,8 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-content: stretch;
+    align-items: center;
 }
 
 .disp {
@@ -158,6 +161,47 @@ body {
     text-align: center;
     color: white;
 }
+
+
+.availTable {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 20px;
+    font-family: Alegreya, sans;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.availTable thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.availTable th,
+.availTable td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.availTable-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.availTable tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.availTable tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.availTable tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
 
 @media only screen and (max-width: 1200px) {
 

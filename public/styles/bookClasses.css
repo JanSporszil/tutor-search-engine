@@ -47,6 +47,27 @@ body {
     flex-direction: row;
 }
 
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+
+}
+
+.profile {
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    font-family: Alegreya, sans;
+    font-size: 15px;
+    border: 0;
+    border-radius: 1em;
+    box-shadow: 0 8px 5px rgb(0 0 0 / 30%);
+    justify-self: flex-end;
+    margin-right: 20px;
+}
+
+
 .main-content {
     width: 70%;
     height: 80%;
@@ -194,6 +215,11 @@ body {
     .desc{
         padding: 30px;
         font-size: 30px;
+    }
+
+    .profile {
+        height: 60px;
+        font-size: 22px;
     }
 
     .right {

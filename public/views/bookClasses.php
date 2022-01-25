@@ -11,13 +11,10 @@
 
 <body>
 <div class="container">
-    <div class="header">
-        <p class="logo">SQUANCHU</p>
 
+    <?php include 'headerwithprofile.php'; ?>
 
-    </div>
     <div class="content">
-
         <div class="main-content">
 
 
