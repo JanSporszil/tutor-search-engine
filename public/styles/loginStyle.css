@@ -225,4 +225,8 @@ body {
         font-size: 34px;
     }
 
+    select > option {
+        font-size: 15px;
+    }
+
 }

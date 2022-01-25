@@ -65,7 +65,7 @@
 
 
         <div class="displayAvailability">
-            <table class="availTable">
+            <table class="flat-table">
             <?php
             if(isset($availability) && is_array($availability)){
 

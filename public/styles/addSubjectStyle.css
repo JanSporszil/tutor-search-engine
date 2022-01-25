@@ -190,5 +190,8 @@ body {
         height: 80px;
     }
 
+    select > option {
+        font-size: 15px;
+    }
 
 }

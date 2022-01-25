@@ -340,5 +340,10 @@ a {
     .enrollButton {
         font-size: 26px;
     }
+
+    select > option {
+        font-size: 15px;
+    }
+
 }
 

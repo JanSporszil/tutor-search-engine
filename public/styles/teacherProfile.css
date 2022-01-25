@@ -396,4 +396,8 @@ a {
         font-size: 35px;
     }
 
+    select > option {
+        font-size: 15px;
+    }
+
 }
