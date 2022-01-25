@@ -26,6 +26,7 @@ Student po wyszukaniu korepetytora, może zapisać się na zajęcia w czasie dos
 1. Dokumentacja w pliku README.md
 2. Część backendowa została napisana obiektowo
 3. Diagram ERD
+
 ![img.png](screens/ERD.png)
 4. Systematyczne commity projektu
 5. Zrealizowane widoki przesłane w zgłoszeniu, dodałem również kilka dodatkowych widoków 
