@@ -113,15 +113,16 @@ class SecurityController extends AppController
 
         $Email = $_POST['Email'];
         define("EMAIL_REQ", 'Nieprawdiłowy email');
+        define("EMAIL_EXISTS", 'Podany email już istnieje');
 
         $Username = $_POST['Username'];
         define("USERNAME_REQ", 'Nieprawdiłowa nazwa użytkownika');
+        define("USERNAME_EXISTS", 'Podany użytkownik już istnieje');
 
         $Password = $_POST['Password'];
         define("PASSWORD_REQ", 'Nieprawdiłowe hasło. Musi zawierać: małą literę, dużą literę, znak specjalny oraz cyfrę.');
 
         $AccountType = $_POST['AccountType'];
-
 
 
         $this->validate($Name, NAME_REQ);
@@ -131,9 +132,16 @@ class SecurityController extends AppController
             $this->render('registerAccount', ['messages' => [EMAIL_REQ]]);
             die();
         }
+        if($this->userRepository->ifEmailExists($Email) != 0){
+            $this->render('registerAccount', ['messages' => [EMAIL_EXISTS]]);
+            die();
+        }
 
         $this->validate($Username, USERNAME_REQ);
-
+        if($this->userRepository->ifUsernameExists($Username) != 0){
+            $this->render('registerAccount', ['messages' => [USERNAME_EXISTS]]);
+            die();
+        }
 
         if(!$this->password_strength_check($Password)){
             $this->render('registerAccount', ['messages' => [PASSWORD_REQ]]);

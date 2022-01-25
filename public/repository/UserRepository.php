@@ -69,4 +69,23 @@ class UserRepository extends Repository
 
         $stmt->execute([$City, $Description, $id]);
     }
+
+    public function ifUsernameExists($username): int
+    {
+        $ifExist = $this->database->connect()->prepare('select "Username" from "Users" where "Username" = :username');
+        $ifExist->bindParam(':username', $username, PDO::PARAM_STR);
+        $ifExist->execute();
+
+        return $ifExist->rowCount();
+    }
+
+    public function ifEmailExists($email): int
+    {
+        $ifExist = $this->database->connect()->prepare('select "Email" from "Users" where "Email" = :email');
+        $ifExist->bindParam(':email', $email, PDO::PARAM_STR);
+        $ifExist->execute();
+
+        return $ifExist->rowCount();
+    }
+
 }
