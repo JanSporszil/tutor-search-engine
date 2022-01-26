@@ -2,16 +2,16 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="public/styles/loginStyle.css">
-    <title>
-        Projekt PAI
-    </title>
+
+    <?php include 'metatags.php'; ?>
+    <?php include 'favAndTitle.php'; ?>
+
 </head>
 
 <body>
     <div class="container">
-        <div class="header">
-                <p class="logo">SQUANCHU</p>
-        </div>
+
+        <?php include 'headerwithprofile.php'; ?>
 
         <div class="content">
             <div class="textSide">

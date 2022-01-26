@@ -158,7 +158,7 @@ class SecurityController extends AppController
 
         $this->userRepository->register($user);
 
-        return $this->render('login', ['messages' => ['Successfully registered!<br/> Now you can login']]);
+        return $this->render('login', ['messages' => ['Pomyślnie zarejestrowano<br/> Teraz możesz się zalogować']]);
 
     }
 

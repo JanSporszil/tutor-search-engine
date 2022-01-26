@@ -1,10 +1,11 @@
 <html>
 
 <head>
+
     <link rel="stylesheet" type="text/css" href="public/styles/studentProfile.css">
-    <title>
-        Projekt PAI
-    </title>
+    <?php include 'metatags.php'; ?>
+    <?php include 'favAndTitle.php'; ?>
+
 </head>
 
 <body>

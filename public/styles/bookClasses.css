@@ -168,7 +168,7 @@ body {
 }
 
 .abutton {
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -178,7 +178,7 @@ body {
 
 .signButton {
     height: 50px;
-    width: 50%;
+    width: 100%;
     border: 1px solid forestgreen;
     border-radius: 10px;
     font-size: 15px;
@@ -257,6 +257,10 @@ body {
         height: 80px;
         font-size: 30px;
         width: 60%;
+    }
+
+    select > option {
+        font-size: 15px;
     }
 
 }

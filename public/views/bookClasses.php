@@ -4,9 +4,9 @@
     <link rel="stylesheet" type="text/css" href="/public/styles/bookClasses.css">
     <script type="text/javascript" src="/public/assets/js/bookClasses.js"></script>
     <script type="text/javascript" src="/public/assets/js/displayHours.js"></script>
-    <title>
-        Projekt PAI
-    </title>
+
+    <?php include 'metatags.php'; ?>
+    <?php include 'favAndTitle.php'; ?>
 </head>
 
 <body>

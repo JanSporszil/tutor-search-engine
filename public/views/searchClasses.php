@@ -3,9 +3,10 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/styles/searchClasses.css">
     <script type="text/javascript" src="public/assets/js/getTeacherID.js"></script>
-    <title>
-        Projekt PAI
-    </title>
+
+    <?php include 'metatags.php'; ?>
+    <?php include 'favAndTitle.php'; ?>
+
 </head>
 
 <body>
@@ -43,11 +44,6 @@
 
                         ?>
                 <div class="teacher">
-                    <div class="leftSide">
-                        <div class="picture">
-
-                        </div>
-                    </div>
                     <div class="teacherInfo">
                         <div class="upper">
                             <div class="name&surname">

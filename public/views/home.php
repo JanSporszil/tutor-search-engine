@@ -2,9 +2,11 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="public/styles/homeStyle.css">
-    <title>
-        Projekt PAI
-    </title>
+
+    <?php include 'metatags.php'; ?>
+    <?php include 'favAndTitle.php'; ?>
+    <?php include 'favAndTitle.php'; ?>
+
 </head>
 
 <body>

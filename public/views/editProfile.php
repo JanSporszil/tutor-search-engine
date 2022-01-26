@@ -2,9 +2,9 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="public/styles/editProfileStyle.css">
-    <title>
-        Projekt PAI
-    </title>
+
+    <?php include 'metatags.php'; ?>
+    <?php include 'favAndTitle.php'; ?>
 </head>
 
 <body>

@@ -3,9 +3,9 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/styles/addSubjectStyle.css">
     <script type="text/javascript" src="public/assets/js/deleteSubject.js"></script>
-    <title>
-        Projekt PAI
-    </title>
+    <?php include 'metatags.php'; ?>
+    <?php include 'favAndTitle.php'; ?>
+
 </head>
 
 <body>
