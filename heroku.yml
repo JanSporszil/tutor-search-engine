@@ -1,4 +1,0 @@
-build:
-  docker:
-    web: Docker/nginx/Dockerfile
-    php: Docker/php/Dockerfile
